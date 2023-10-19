@@ -1,20 +1,18 @@
-//
-//  AppDelegate.swift
-//  ScrollGameProgrammatic
-//
-//  Created by Kelvin Gao  on 5/10/2566 BE.
-//
-
 import UIKit
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
-
-
+    
+    var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        window = UIWindow()
+        window?.makeKeyAndVisible()
+        
+        let swipingController = SwipingController(collectionViewLayout: UICollectionViewFlowLayout())
+        window?.rootViewController = swipingController
         return true
+        
     }
 
     // MARK: UISceneSession Lifecycle
